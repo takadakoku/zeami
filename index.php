@@ -66,19 +66,19 @@ class Hoge extends DB_connect{
 	<h1>・ステッカー</h1>
 <?php
 	foreach($stickers as $sticker){
-		echo '<a style="padding:3%;" href="options.php?product_id='.$sticker['product_id'].'">'.$sticker['product_name'].'</a><br />';
+		echo '<a style="margin:3%;" href="options.php?product_id='.$sticker['product_id'].'">'.$sticker['product_name'].'(id:'.$sticker['product_id'].')</a><br />';
 	}
 ;?>
 	<h1>・缶バッチ</h1>
 <?php
 	foreach($kanbjjis as $kanbjji){
-		echo '<a style="padding:3%;" href="options.php?product_id='.$kanbjji['product_id'].'">'.$kanbjji['product_name'].'</a><br />';
+		echo '<a style="margin:3%;" href="options.php?product_id='.$kanbjji['product_id'].'">'.$kanbjji['product_name'].'(id:'.$kanbjji['product_id'].')</a><br />';
 	}
 ;?>
 	<h1>・その他</h1>
 <?php
 	foreach($others as $other){
-		echo '<a style="padding:3%;" href="options.php?product_id='.$other['product_id'].'">'.$other['product_name'].'</a><br />';
+		echo '<a style="margin:3%;" href="options.php?product_id='.$other['product_id'].'">'.$other['product_name'].'(id:'.$other['product_id'].')</a><br />';
 	}
 ;?>
 <script>

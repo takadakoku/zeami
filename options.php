@@ -30,7 +30,7 @@ $options = $hoge->get_options($_GET['product_id']);
 	<title>Product</title>
 </head>
 <body style="padding: 10%;">
-	<form action="index.php" method="get">
+	<form action="result.php" method="get">
 		<?php
 			$flg = 0;
 			foreach ($options as $option) {
@@ -38,16 +38,16 @@ $options = $hoge->get_options($_GET['product_id']);
 					if($flg == 0){
 						echo '<p>STEP'. $option['step'] .'</p>';
 					}
-					if($option['option_id'] == 1){
-						echo '<button type="button"><input onclick="remove_id22()" type="radio" name="step1" value="'.$option['option_id'].'">'.$option['text'].'（id:'.$option['option_id'].', remove_option_id:22）</button>';
-					}else if($option['option_id'] == 2){
-						echo '<button type="button"><input onclick="remove_step2()" type="radio" name="step1" value="'.$option['option_id'].'">'.$option['text'].'（id:'.$option['option_id'].'remove_option_id:10,11）</button>';
+					if($option['option_id'] == 35){
+						echo '<button type="button"><input onclick="remove_id43()" type="radio" name="step1" value="'.$option['option_id'].'">'.$option['text'].'（id:'.$option['option_id'].', remove_option_id:43）</button>';
+					}else if($option['option_id'] == 36){
+						echo '<button type="button"><input onclick="remove_step2()" type="radio" name="step1" value="'.$option['option_id'].'">'.$option['text'].'（id:'.$option['option_id'].'remove_option_id:48,49）</button>';
 					}else{
 						echo '<button type="button"><input type="radio" name="step1" value="'.$option['option_id'].'">'.$option['text'].'（id:'.$option['option_id'].'）</button>';
 					}
 					$flg = 1;
 				}
-			}
+			}			
 			$flg = 0;
 			echo '<br />';
 		?>
@@ -74,7 +74,7 @@ $options = $hoge->get_options($_GET['product_id']);
 					if($flg == 0){
 						echo '<p>STEP'. $option['step'] .'</p>';
 					}
-					echo '<button type="button"><input type="radio" name="step3" value="'.$option['option_id'].'">'.$option['text'].'（id:'.$option['option_id'].'）</button>';
+					echo '<button type="button" id='.$option["option_id"].'><input type="radio" name="step3" value="'.$option['option_id'].'">'.$option['text'].'（id:'.$option['option_id'].'）</button>';
 					$flg = 1;
 				}
 			}
@@ -132,8 +132,8 @@ $options = $hoge->get_options($_GET['product_id']);
 		<button type="submit">OK</button>
 	</form>
 <script>
-	function remove_id22(){
-		document.getElementById('id22').remove();
+	function remove_id43(){
+		document.getElementById('43').remove();
 	}
 
 	function remove_step2(){
